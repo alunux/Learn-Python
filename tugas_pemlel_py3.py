@@ -147,7 +147,7 @@ def main(argument):
     '''
     This is the main function
     '''
-    nim = str(argument[1])
+    nim = argument[1]
     if len(nim) == 15:
         if int(nim) % 2 == 0:
             print ("NIM Anda Genap: %s" % nim)
