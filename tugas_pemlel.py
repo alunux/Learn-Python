@@ -2,12 +2,10 @@
 from sys import argv
 
 def sort_min_to_max(nim):
-    '''This function using Merge Sort algorithm and sort nim from min to max
-    number
-
+    '''
+    This function using Merge Sort algorithm and sort nim from min to max number
     parameter: nim = a list of integer
     return   : nim = a list of integer
-
     Note     : nim is a list data type
     '''
     if len(nim) > 1:
@@ -41,12 +39,10 @@ def sort_min_to_max(nim):
     return nim
 
 def sort_max_to_min(nim):
-    '''This function using Merge Sort algorithm and sort nim from max to min
-    number
-
+    '''
+    This function using Merge Sort algorithm and sort nim from max to min number
     parameter: nim = a list of integer
     return   : nim = a list of integer
-
     Note     : nim is a list data type
     '''
     if len(nim) > 1:
@@ -79,11 +75,10 @@ def sort_max_to_min(nim):
     return nim
 
 def fill_matrix(nim):
-    '''Generate value for Matrix X and Matrix Y from nim.
-
+    '''
+    Generate value for Matrix X and Matrix Y from nim.
     parameter: nim = a list of integer
     return   : x = a 2x3 matrix, y = a 3x3 matrix
-
     Note     : x, y, and nim are list data type
     '''
     x = [
@@ -111,11 +106,10 @@ def fill_matrix(nim):
     return x, y
 
 def multiply_matrix(x, y):
-    '''Multiply Matrix X and Matrix Y
-
+    '''
+    Multiply Matrix X and Matrix Y
     parameter: x = a 2x3 matrix, y = a 3x3 matrix
     return   : z = a 2x3 matrix
-
     Note     : x, y, and z are list data type
     '''
     z = [
@@ -131,24 +125,27 @@ def multiply_matrix(x, y):
     return z
 
 def print_matrix(matrix):
-    '''print all element in a matrix
-
+    '''
+    Print all element in a matrix
     parameter: matrix = a matrix
     return   : nothing
-
     Note     : matrix is a list data type
     '''
     for element in matrix:
         print element
 
 def print_help():
+    '''
+    Print information about the program
+    '''
     print "Usage: python2 tugas_pemlel.py your_NIM" \
           "\n- if your_NIM is even, then tugas_pemlel.py will execute sorting "\
           "program \n- if your_NIM is odd, then tugas_pemlel.py will execute " \
           "matrix multiplication program"
 
 def main(argument):
-    '''This is the main function
+    '''
+    This is the main function
     '''
     nim = argument[1]
     if len(nim) == 15:
