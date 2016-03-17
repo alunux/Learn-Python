@@ -138,7 +138,7 @@ def print_help():
     '''
     Print information about the program
     '''
-    print ("Usage: python2 tugas_pemlel.py your_NIM" \
+    print ("Usage: python3 tugas_pemlel.py your_NIM" \
           "\n- if your_NIM is even, then tugas_pemlel.py will execute sorting "\
           "program \n- if your_NIM is odd, then tugas_pemlel.py will execute " \
           "matrix multiplication program")
