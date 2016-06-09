@@ -36,8 +36,8 @@ def ping_server(server_addr):
 
 def print_info_disk(info, data_disk):
     for i in info:
-        print("Total\t\t\t: %.2f kB\t\t%.2f MB\t%.2f GB" \
-              % (data_disk[i]['kB'], data_disk[i]['MB'], data_disk[i]['GB']))
+        print("%s\t\t\t: %.2f kB\t\t%.2f MB\t%.2f GB" \
+              % (i, data_disk[i]['kB'], data_disk[i]['MB'], data_disk[i]['GB']))
 
 def main(server_addr):
     server = ServerProxy("http://" + server_addr + ":13000/", allow_none=True)
@@ -54,4 +54,4 @@ if __name__ == '__main__':
     if len(argv) == 2:
         main(argv[1])
     else:
-        print("Need an IP address")
+        print("Need IP Address")
