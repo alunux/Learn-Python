@@ -35,8 +35,9 @@ def ping_server(server_addr):
         return ("Down", server_addr)
 
 def print_info_disk(info, data_disk):
-    print("Total\t\t\t: %.2f kB\t\t%.2f MB\t%.2f GB" \
-          % (data_disk[info]['kB'], data_disk[info]['MB'], data_disk[info]['GB']))
+    for i in info:
+        print("Total\t\t\t: %.2f kB\t\t%.2f MB\t%.2f GB" \
+              % (data_disk[i]['kB'], data_disk[i]['MB'], data_disk[i]['GB']))
 
 def main(server_addr):
     server = ServerProxy("http://" + server_addr + ":13000/", allow_none=True)
@@ -45,14 +46,12 @@ def main(server_addr):
     if status_server == "Up":
         try:
             data_disk = loads(server.server_disk_usage())
-            print_info_disk("Total", data_disk)
-            print_info_disk("Used", data_disk)
-            print_info_disk("Free", data_disk)
+            print_info_disk(["Total", "Used", "Free"], data_disk)
         except ConnectionRefusedError:
-            print("But, lovorus-server.py is not running on the server")
+            print("Can't connect to lovorus-server.py on the server")
 
 if __name__ == '__main__':
     if len(argv) == 2:
         main(argv[1])
     else:
-        print("Parameter kurang")
+        print("Need an IP address")
