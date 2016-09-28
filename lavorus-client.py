@@ -36,7 +36,7 @@ def ping_server(server_addr):
 
 def print_info_disk(info, data_disk):
     for i in info:
-        print("%s\t\t\t: %.2f kB\t\t%.2f MB\t%.2f GB" \
+        print("%s\t\t: %15.2f kB\t%15.2f MB\t%15.2f GB" \
               % (i, data_disk[i]['kB'], data_disk[i]['MB'], data_disk[i]['GB']))
 
 def main(server_addr):
